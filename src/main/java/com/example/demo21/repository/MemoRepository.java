@@ -36,4 +36,6 @@ public interface MemoRepository extends JpaRepository<Memo, Long> {
     List<Memo> findByMnoBetweenOrderByMnoDesc(Long a, Long b);
 
     List<Memo> findByMnoBetween(Long a, Long b, Pageable pageable);
+    List<Memo> findByMemoTextContainsAndMnoBetween(String a, int b, int c);
+
 }
